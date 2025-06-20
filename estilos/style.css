@@ -1,0 +1,248 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+     background-image:url("../imagens/papel\ de\ parese1.png");
+    background-repeat: repeat;
+    background-size: auto;
+    background-position: top left;
+    position: relative;
+ 
+}
+
+
+#cabecalho {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10% 30% 10% 25%;
+}
+
+#busca {
+  padding: 7px;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.521);
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.322);
+  outline: none;
+}
+
+.nao-encontrado{
+  text-align: center;
+  font-size: 2em;
+
+  
+}
+
+#btn {
+  position: relative;
+}
+
+i {
+  position: absolute;
+  right: 7px;
+  top: 1px;
+  color: rgba(0, 0, 0, 0.603)
+}
+
+#banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-left: 1vh;
+
+
+}
+
+#banner>img {
+  width: 100vw;
+  margin-bottom: 50px;
+
+}
+
+main {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 20% 6% 10% 5%;
+}
+
+.cards {
+  max-height: 150px;
+  min-width: 100px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px 20px;
+}
+
+.peca {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 150px;
+  max-height: 340px;
+  padding: 20px 20px 100px 20px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+}
+
+
+
+.img-pecas {
+  height: 100%;
+  width: 150px;
+  object-fit: cover;
+  border-radius: 15px;
+
+}
+
+.peca>.informacoes-da-peca {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.peca>.informacoes-da-peca>.titulo {
+  font-size: 1.1em;
+}
+
+.peca>.informacoes-da-peca>.valor-e-btn {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.peca>.informacoes-da-peca>.valor-e-btn>.btn-link {
+  padding: 7px;
+  border-radius: 7px;
+  border: 1px solid rgba(0, 0, 0, 0.452);
+  background-color: #0a7db3;
+  color: white;
+  width: 100px;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.overlay-content {
+  background: url("../imagens/fundo-galeria-500.png");
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 90%;
+  max-height: 100%;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+}
+
+.fechar {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.galeria-principal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.galeria-principal img {
+  max-width: 500px;
+  max-height: 500px;
+  border-radius: 10px;
+}
+
+.seta {
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #333;
+}
+
+.indicadores {
+  margin-top: 15px;
+}
+
+.indicadores span {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-color: #bbb;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.indicadores span.ativo {
+  background-color: #555;
+}
+
+
+
+
+@media screen and (min-width:1028px){
+  #cabecalho {
+  margin: 3% 0% 10% 75%;
+}
+
+#banner>img {
+  width: 50vw;
+  margin-left:50px ;
+  margin-bottom: 30px;
+
+}
+main {
+  max-width:100%;
+  max-width:100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 10% 6% 10% 5%;
+}
+
+.cards {
+  max-height: 150px;
+  min-width: 200px;
+  gap: 30px 20px;
+}
+
+.peca {
+  max-width: 250px;
+  max-height:350px;
+  padding: 40px;
+}
+
+.nao-encontrado{
+  text-align: center;
+  font-size: 2em;
+  position: absolute;
+  transform: translate(100%, -40%);
+  
+}
+
+}

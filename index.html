@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/b8b266bbec.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+    <title>Ana Célia Crochê</title>
+    <link rel="stylesheet" href="estilos/style.css">
+</head>
+
+<body>
+    <header>
+        <section id="cabecalho">
+            <div id="buscador">
+                <input type="text" name="busca" id="busca" placeholder="Buscar por peças">
+                <span id="btn"><i class="fa-solid fa-magnifying-glass"></i></span>
+            </div>
+        </section>
+        <section id="banner">
+            <img src="imagens/banner-completo.png" alt="banner do site">
+        </section>
+    </header>
+
+    <main>
+        <section class="cards">
+        </section>
+
+        <p class="nao-encontrado"></p>
+
+
+        <div class="overlay" id="galeriaOverlay">
+            <div class="overlay-content">
+                <span class="fechar" id="fecharOverlay">&times;</span>
+
+                <div class="galeria-principal">
+                    <button class="seta" id="setaAnterior">&#10094;</button>
+                    <img id="fotoAtual" src="" alt="Foto atual">
+                    <button class="seta" id="setaProxima">&#10095;</button>
+                </div>
+
+                <div class="indicadores" id="indicadores"></div>
+            </div>
+        </div>
+
+
+
+    </main>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
