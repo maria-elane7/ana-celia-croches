@@ -15,7 +15,7 @@ let listaAtual = []; // Lista que será usada para manter os itens exibidos
 let pecas = [
     {
         img: "imagens/pecas/tapete-azul-01.jpg",
-        titulo: "Tapete oval azul-marinho",
+        titulo: "Tapete oval azul-escuro",
         valor: "R$ 50,00",
         galeria: [
             "imagens/pecas/tapete-azul-01.jpg",
