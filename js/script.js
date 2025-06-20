@@ -114,7 +114,7 @@ busca.addEventListener("input", () => {
     }
 });
 
-// Ao clicar em "Ver mais...", abre galeria do item exibido (usando listaAtual)
+
 document.addEventListener("click", function (e) {
     if (e.target.classList.contains("btn-link")) {
         let index = e.target.getAttribute("data-index");
@@ -125,12 +125,12 @@ document.addEventListener("click", function (e) {
     }
 });
 
-// Fechar galeria
+
 fecharOverlay.addEventListener("click", () => {
     overlay.style.display = "none";
 });
 
-// Atualiza a galeria com imagem atual e bolinhas
+
 function atualizarGaleria() {
     fotoAtual.src = galeriaAtual[indexAtual];
     indicadores.innerHTML = "";

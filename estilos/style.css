@@ -147,7 +147,7 @@ main {
   background: url("../imagens/fundo-galeria-500.png");
   padding: 20px;
   border-radius: 12px;
-  max-width: 90%;
+  max-width: 97%;
   max-height: 100%;
   overflow: hidden;
   position: relative;
@@ -156,8 +156,8 @@ main {
 
 .fechar {
   position: absolute;
-  top: 10px;
-  right: 20px;
+  top: 7px;
+  right: 8px;
   font-size: 30px;
   cursor: pointer;
 }
