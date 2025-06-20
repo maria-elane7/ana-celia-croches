@@ -8,9 +8,9 @@ let setaProxima = document.getElementById("setaProxima");
 let busca = document.getElementById("busca");
 let naoEncontrado = document.querySelector(".nao-encontrado");
 
-
 let galeriaAtual = [];
 let indexAtual = 0;
+let listaAtual = []; // Lista que será usada para manter os itens exibidos
 
 let pecas = [
     {
@@ -75,6 +75,7 @@ let pecas = [
 
 // Função que cria os cards (usada para mostrar todos ou os filtrados)
 function renderizarCards(lista) {
+    listaAtual = lista; // Atualiza a lista exibida
     cards.innerHTML = "";
     lista.forEach((p, index) => {
         cards.innerHTML += `
@@ -111,15 +112,13 @@ busca.addEventListener("input", () => {
         cards.innerHTML = "";
         naoEncontrado.innerHTML = "Nenhuma peça encontrada.";
     }
-
 });
 
-
-// Ao clicar em "Ver mais...", abre galeria
+// Ao clicar em "Ver mais...", abre galeria do item exibido (usando listaAtual)
 document.addEventListener("click", function (e) {
     if (e.target.classList.contains("btn-link")) {
         let index = e.target.getAttribute("data-index");
-        galeriaAtual = pecas[index].galeria;
+        galeriaAtual = listaAtual[index].galeria;
         indexAtual = 0;
         atualizarGaleria();
         overlay.style.display = "flex";
