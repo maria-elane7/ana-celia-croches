@@ -10,7 +10,7 @@ let naoEncontrado = document.querySelector(".nao-encontrado");
 
 let galeriaAtual = [];
 let indexAtual = 0;
-let listaAtual = []; // Lista que será usada para manter os itens exibidos
+let listaAtual = []; 
 
 let pecas = [
     {
@@ -65,7 +65,7 @@ let pecas = [
     {
         img: "imagens/pecas/4.jpg",
         titulo: "Suplar 4 peças verde escuro",
-        valor: "R$ 60,00",
+        valor: "R$ 180,00",
         galeria: [
             "imagens/pecas/4.jpg",
             "imagens/pecas/5.jpg"
@@ -73,9 +73,8 @@ let pecas = [
     }
 ];
 
-// Função que cria os cards (usada para mostrar todos ou os filtrados)
 function renderizarCards(lista) {
-    listaAtual = lista; // Atualiza a lista exibida
+    listaAtual = lista; 
     cards.innerHTML = "";
     lista.forEach((p, index) => {
         cards.innerHTML += `
@@ -93,10 +92,9 @@ function renderizarCards(lista) {
     });
 }
 
-// Exibe todos os cards ao carregar
 renderizarCards(pecas);
 
-//  Filtro de busca
+
 busca.addEventListener("input", () => {
     let termos = busca.value.toLowerCase().split(" ").filter(p => p !== "");
 
@@ -146,13 +144,12 @@ function atualizarGaleria() {
     });
 }
 
-// Seta para próxima imagem
 setaProxima.addEventListener("click", () => {
     indexAtual = (indexAtual + 1) % galeriaAtual.length;
     atualizarGaleria();
 });
 
-// Seta para imagem anterior
+
 setaAnterior.addEventListener("click", () => {
     indexAtual = (indexAtual - 1 + galeriaAtual.length) % galeriaAtual.length;
     atualizarGaleria();
