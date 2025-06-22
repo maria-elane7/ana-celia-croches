@@ -95,7 +95,10 @@ function renderizarCards(lista) {
 renderizarCards(pecas);
 
 
+ 
+
 busca.addEventListener("input", () => {
+
     let termos = busca.value.toLowerCase().split(" ").filter(p => p !== "");
 
     let resultado = pecas.filter(p => {
@@ -103,7 +106,7 @@ busca.addEventListener("input", () => {
         return termos.every(palavra => titulo.includes(palavra));
     });
 
-    busca.value = "";
+     
     
     if (resultado.length > 0) {
         renderizarCards(resultado);
@@ -112,7 +115,10 @@ busca.addEventListener("input", () => {
         cards.innerHTML = "";
         naoEncontrado.innerHTML = "Nenhuma peça encontrada.";
     }
+
+    
 });
+
 
 
 document.addEventListener("click", function (e) {
