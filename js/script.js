@@ -103,6 +103,8 @@ busca.addEventListener("input", () => {
         return termos.every(palavra => titulo.includes(palavra));
     });
 
+    busca.value = "";
+    
     if (resultado.length > 0) {
         renderizarCards(resultado);
         naoEncontrado.innerHTML = "";
